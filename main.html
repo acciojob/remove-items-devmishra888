@@ -20,18 +20,12 @@
 let colorSelect = document.getElementById('colorSelect')
 let removeButton = document.getElementById('removeButton')
 
-
 removeButton.addEventListener('click', ()=>{
-
-let selectedOption = colorSelect.options[colorSelect.selectedIndex];
-
-if(selectedOption){
-    selectedOption.remove();
-}
-
-
+  let selectedIndex = colorSelect.selectedIndex;
+  if(selectedIndex != -1){
+    colorSelect.remove(selectedIndex);
+  }
 });
-
 
 </script>
 
